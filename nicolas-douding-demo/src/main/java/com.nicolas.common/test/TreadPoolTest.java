@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @version V1.0
@@ -46,6 +47,8 @@ public class TreadPoolTest {
             e.printStackTrace();
 
         }
+
+        ReentrantLock lock = new ReentrantLock();
 
     }
 }
