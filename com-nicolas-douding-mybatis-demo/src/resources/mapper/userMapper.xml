@@ -16,6 +16,6 @@
 
 
     <select id="getUserByID" parameterType="java.lang.Long" resultMap="userMap">
-        select * from `yunos_uuid_0` where id = #{id,jdbcType=BIGINT}
+        select * from `yunos_uuid_0` where id = #{id}
     </select>
 </mapper>
