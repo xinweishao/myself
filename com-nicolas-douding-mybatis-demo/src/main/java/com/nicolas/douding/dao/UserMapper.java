@@ -12,5 +12,5 @@ import com.nicolas.douding.entity.User;
  */
 public interface UserMapper {
 
-    User getUserByID(Integer id) throws Exception;
+    User getUserByID(long id) throws Exception;
 }

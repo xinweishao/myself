@@ -7,14 +7,15 @@
 <mapper namespace="com.nicolas.douding.dao.UserMapper">
     <!-- 自定义返回结果集 -->
     <resultMap id="userMap" type="User">
-        <id property="id" column="id" javaType="java.lang.Integer"></id>
-        <result property="username" column="username" javaType="java.lang.String"></result>
-        <result property="password" column="password" javaType="java.lang.String"></result>
-        <result property="account" column="account" javaType="java.lang.Double"></result>
+        <id property="id" column="id" javaType="java.lang.Long"></id>
+        <result property="cid" column="cid" javaType="java.lang.String"></result>
+        <result property="uuid" column="uuid" javaType="java.lang.String"></result>
+        <result property="cid_type" column="cidType" javaType="java.lang.Integer"></result>
+        <result property="ctime" column="ctime" javaType="java.util.Date"></result>
     </resultMap>
 
 
-    <select id="GetUserByID" parameterType="int" resultMap="userMap">
-        select * from `user` where id = #{id}
+    <select id="getUserByID" parameterType="java.lang.Long" resultMap="userMap">
+        select * from `yunos_uuid_0` where id = #{id,jdbcType=BIGINT}
     </select>
 </mapper>

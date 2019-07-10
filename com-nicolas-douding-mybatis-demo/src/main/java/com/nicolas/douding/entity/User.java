@@ -1,10 +1,10 @@
 package com.nicolas.douding.entity;
 
 import com.alibaba.fastjson.JSON;
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @version V1.0
@@ -17,15 +17,12 @@ import java.io.Serializable;
 @Data
 public class User implements Serializable {
 
-    private static final long serialVersionUID = 8104961490512068314L;
+    private static final long serialVersionUID = -6218607446588858625L;
     private Long id;
-    private Long clientId;
-    private Integer productId;
-    private String version;
-    private String token;
-    private Integer status;
-    private String channelId;
-    private Integer activeLevel;
+    private String cid;
+    private String uuid;
+    private Date ctime;
+    private Integer cidType;
 
     @Override
     public String toString() {

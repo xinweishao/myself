@@ -1,5 +1,8 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <properties resource="mysql.properties"></properties>
+    <properties resource="jdbc.properties"></properties>
 
 
     <typeAliases>
@@ -7,7 +10,7 @@
         <typeAliase type="com.mybatis.demo.Entity.User" alias="UserBean"/> -->
         <!-- 别名方式2，自动扫描，将JAVA类的类名作为类的类别名 -->
         <!--<package name="com.mybatis.demo.Entity"/>-->
-        <typeAlias alias="User" type="com.mybatis.demo.Entity.User"/>
+        <typeAlias alias="User" type="com.nicolas.douding.entity.User"/>
     </typeAliases>
 
     <!-- 配置mybatis运行环境 -->
@@ -32,7 +35,7 @@
 
     <mappers>
         <!-- 映射文件方式1，一个一个的配置-->
-        <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/userMapper.xml"/>
         <!-- 映射文件方式2，自动扫描包内的Mapper接口与配置文件 -->
         <!--<package name="com.mybatis.demo"/>-->
     </mappers>

@@ -27,13 +27,13 @@ public class UserDaoTest {
 
         try {
             //使用MyBatis提供的Resources类加载mybatis的配置文件
-            Reader reader = Resources.getResourceAsReader("mapper/mybatis-config.xml");
+            Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
             //构建sqlSession的工厂
             SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(reader);
 
             SqlSession session= sessionFactory.openSession();
             UserMapper mapper=session.getMapper(UserMapper.class);
-            User user= mapper.getUserByID(1);
+            User user= mapper.getUserByID(1l);
             System.out.println(user.toString());
 
             session.commit();
