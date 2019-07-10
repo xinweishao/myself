@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="com-nicolas-douding-mybatis-demo" />
         <module name="nicolas-douding-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com-nicolas-douding-mybatis-demo" target="1.7" />
       <module name="myself" target="1.5" />
       <module name="nicolas-douding-demo" target="8" />
     </bytecodeTargetLevel>
