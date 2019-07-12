@@ -18,4 +18,13 @@
     <select id="getUserByID" parameterType="java.lang.Long" resultMap="userMap">
         select * from `yunos_uuid_0` where id = #{id}
     </select>
+
+    <select id="getUserByCidUUid" parameterType="Map" resultMap="userMap">
+        select * from `yunos_uuid_0` where cid = #{cid}
+        <if test="uuid != null and uuid != ''">
+            and uuid=#{uuid}
+        </if>
+
+    </select>
+
 </mapper>

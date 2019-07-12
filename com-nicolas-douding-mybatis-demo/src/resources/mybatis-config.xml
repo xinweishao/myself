@@ -4,6 +4,10 @@
 <configuration>
     <properties resource="jdbc.properties"></properties>
 
+    <settings>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
 
     <typeAliases>
         <!-- 别名方式1，一个一个的配置 type中放置的是类的全路径，alias中放置的是类别名
@@ -12,7 +16,14 @@
         <!--<package name="com.mybatis.demo.Entity"/>-->
         <typeAlias alias="User" type="com.nicolas.douding.entity.User"/>
     </typeAliases>
+    <!-- autoMappingBehavior:
+        mybatis核心配置文件中settings中配置,指定 MyBatis 应如何自动映射列到字段或属性。
+        NONE 表示取消自动映射；PARTIAL 只会自动映射没有定义嵌套结果集映射的结果集。 FULL 会自动映射任意复杂的结果集（无论是否嵌套）。
+         默认是partial，这是一种全局设置
 
+        autoMapping: 在resultMap或者association,collections中使用，是一个局部开关，开启后会自动设置嵌套查询中的属性，
+        局部开关优先级大于全部开关，当全部开关开启FULL映射时，局部开关关闭，这时候仍然不会进行映射。
+    -->
     <!-- 配置mybatis运行环境 -->
     <environments default="development">
         <environment id="development">

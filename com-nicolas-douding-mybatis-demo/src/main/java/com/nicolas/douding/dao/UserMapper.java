@@ -2,6 +2,8 @@ package com.nicolas.douding.dao;
 
 import com.nicolas.douding.entity.User;
 
+import java.util.HashMap;
+
 /**
  * @version V1.0
  *          注意：本内容仅限于搜狐新闻，禁止外泄以及用于其他的商业目
@@ -13,4 +15,6 @@ import com.nicolas.douding.entity.User;
 public interface UserMapper {
 
     User getUserByID(long id) throws Exception;
+
+    User getUserByCidUUid(HashMap<String,Object> map);
 }
