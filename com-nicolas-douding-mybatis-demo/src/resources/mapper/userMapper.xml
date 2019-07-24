@@ -22,7 +22,7 @@
     <select id="getUserByCidUUid" parameterType="Map" resultMap="userMap">
         select * from `yunos_uuid_0` where cid = #{cid}
         <if test="uuid != null and uuid != ''">
-            and uuid=#{uuid}
+            and uuid like "%${uuid}%"
         </if>
 
     </select>

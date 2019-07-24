@@ -34,13 +34,13 @@ public class UserDaoTest {
 
             SqlSession session= sessionFactory.openSession();
             UserMapper mapper=session.getMapper(UserMapper.class);
-            User user= mapper.getUserByID(5l);
-            System.out.println("##################"+user.toString());
+//            User user= mapper.getUserByID(5l);
+//            System.out.println("##################"+user.toString());
 
             HashMap <String,Object> map = new HashMap<String,Object>();
             map.put("cid","1111");
             map.put("uuid","11");
-            user= mapper.getUserByCidUUid(map);
+            User  user= mapper.getUserByCidUUid(map);
             System.out.println("##################"+user.toString());
 
             session.commit();

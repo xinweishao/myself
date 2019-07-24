@@ -14,13 +14,21 @@ public class SortAlgorithm {
 
     public static void main(String[] args) {
 
+        int a = 10 >> 1;
+         int b = a++;
+         int c  = ++a;
+         int d = b * a++;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
 //        int[] nums = new int[]{24,32,1,4,7,6,31,0};
 //        popSort(nums);
 //        selectSort(nums);
 
-        int a[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
-        quickSort(a, 0, a.length - 1);
-        System.out.println(Arrays.toString(a));
+//        int a[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
+//        quickSort(a, 0, a.length - 1);
+//        System.out.println(Arrays.toString(a));
     }
 
     private static void popSort(int[] nums) {
