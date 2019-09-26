@@ -19,7 +19,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class TreadPoolTest {
     //线程池
-    private static ExecutorService executorService = Executors.newFixedThreadPool(10);
+    private static ExecutorService executorService = Executors.newFixedThreadPool(2);
     public static void main(String[] args) {
 
 //        getAppTokenInfo("fb704ef691f49bab414ac3a08a86ca7864419437");
@@ -27,7 +27,7 @@ public class TreadPoolTest {
         try {
             //多线程操作
             List<Future<Map<String, String>>> resultList = new ArrayList<Future<Map<String, String>>>();
-            for (int i=1;i<=1;i++) {
+            for (int i=1;i<=1000;i++) {
 
                 Future<Map<String, String>> future = executorService.submit(new DealData(i));
                 resultList.add(future);

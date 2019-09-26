@@ -29,6 +29,8 @@ public class DealData implements Callable<Map<String, String>> {
     public Map<String, String> call() throws Exception {
 
         Map<String, String> errorMessageMap = new HashMap<String, String>();
+        errorMessageMap.put("key--dd",System.currentTimeMillis()+"");
+        Thread.sleep(100000);
         return errorMessageMap;
     }
 }

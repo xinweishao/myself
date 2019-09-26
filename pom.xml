@@ -11,6 +11,8 @@
     <modules>
         <module>nicolas-douding-demo</module>
         <module>com-nicolas-douding-mybatis-demo</module>
+        <module>nicolas-netty-server-demo</module>
+        <module>nicolas-netty-client-demo</module>
     </modules>
     <dependencies>
         <dependency>
