@@ -13,6 +13,9 @@
         <module>com-nicolas-douding-mybatis-demo</module>
         <module>nicolas-netty-server-demo</module>
         <module>nicolas-netty-client-demo</module>
+        <module>nicolas-dubbo-provider-demo</module>
+        <module>nicolas-dubbo-consumer-demo</module>
+        <module>nicolas-dubbo-api</module>
     </modules>
     <dependencies>
         <dependency>
