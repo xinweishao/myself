@@ -33,9 +33,9 @@ public class Consumer {
                 String hello = demoService.sayHello("world"); // call remote method
                 System.out.println(hello); // get result
 
-            } catch (HelloException helloException ) {
+            } catch (HelloException1 exceptionh ) {
                 System.out.println("这里捕获helloException异常");
-                helloException.printStackTrace();
+                exceptionh.printStackTrace();
             }
 
 

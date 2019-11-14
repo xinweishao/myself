@@ -28,9 +28,15 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String sayHello(String name) {
-        throw new HelloException("qqqqqqqqqqqqqq服务器端异常");
-//        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
-//        return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
+//        throw new HelloException12("qqqqqqqqqqqqqq服务器端异常");
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public String getHia(String name) {
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+        return " getHia  " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
     }
 
 }

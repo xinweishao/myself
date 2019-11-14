@@ -8,9 +8,9 @@ package com.nicolas.douding;
  * @author: 搜狐 - 新闻客户端 - 云端业务 - shaoxinwei
  * @date: 2019-10-30 17:17
  */
-public class HelloException extends RuntimeException{
+public class HelloException1 extends RuntimeException{
 
-    public HelloException(String message) {
+    public HelloException1(String message) {
         super(message);
     }
 }
