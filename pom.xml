@@ -16,6 +16,8 @@
         <module>nicolas-dubbo-provider-demo</module>
         <module>nicolas-dubbo-consumer-demo</module>
         <module>nicolas-dubbo-api</module>
+        <module>nicolas-douding-kafka-demo</module>
+        <module>nicolas-douding-zookeeper-demo</module>
     </modules>
     <dependencies>
         <dependency>
