@@ -5,22 +5,28 @@
 
 
 <mapper namespace="com.nicolas.douding.dao.UserMapper">
+    <!-- 设置二级缓存 二级缓存是mapper级别的缓存，也就是同一个namespace的mappe.xml，当多个SqlSession使用同一个Mapper操作数据库的时候，
+    得到的数据会缓存在同一个二级缓存区域-->
+    <cache />
     <!-- 自定义返回结果集 -->
     <resultMap id="userMap" type="User">
         <id property="id" column="id" javaType="java.lang.Long"></id>
         <result property="cid" column="cid" javaType="java.lang.String"></result>
         <result property="uuid" column="uuid" javaType="java.lang.String"></result>
-        <result property="cid_type" column="cidType" javaType="java.lang.Integer"></result>
+        <result property="cidType" column="cid_type" javaType="java.lang.Integer"></result>
         <result property="ctime" column="ctime" javaType="java.util.Date"></result>
     </resultMap>
 
+    <sql id="table">
+        yunos_uuid_0
+    </sql>
 
     <select id="getUserByID" parameterType="java.lang.Long" resultMap="userMap">
-        select * from `yunos_uuid_0` where id = #{id}
+        select * from <include refid="table" /> where id = #{id}
     </select>
 
     <select id="getUserByCidUUid" parameterType="Map" resultMap="userMap">
-        select * from `yunos_uuid_0` where cid = #{cid}
+        select * from <include refid="table" /> where cid = #{cid}
         <if test="uuid != null and uuid != ''">
             and uuid like "%${uuid}%"
         </if>
