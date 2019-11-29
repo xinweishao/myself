@@ -14,21 +14,21 @@ public class SortAlgorithm {
 
     public static void main(String[] args) {
 
-        int a = 10 >> 1;
-         int b = a++;
-         int c  = ++a;
-         int d = b * a++;
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
+//        int a = 10 >> 1;
+//         int b = a++;
+//         int c  = ++a;
+//         int d = b * a++;
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println(c);
+//        System.out.println(d);
 //        int[] nums = new int[]{24,32,1,4,7,6,31,0};
 //        popSort(nums);
 //        selectSort(nums);
 
-//        int a[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
-//        quickSort(a, 0, a.length - 1);
-//        System.out.println(Arrays.toString(a));
+        int a[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
+        quickSort(a, 0, a.length - 1);
+        System.out.println(Arrays.toString(a));
     }
 
     private static void popSort(int[] nums) {
@@ -104,36 +104,34 @@ public class SortAlgorithm {
     }
 
     public static void quickSort(int a[], int low, int hight) {
-        int i, j, base;
-        if (low > hight) {
-            return;
-        }
-        i = low;
-        j = hight;
-        base = a[i]; // 用子表的第一个记录做基准
-        while (i < j) { // 从表的两端交替向中间扫描
+       int i,j,index;
+       if(low > hight){
+           return;
+       }
+       i = low;
+       j = hight;
+       index = a[i];
 
-            while (i < j && a[j] >= base)
+       while (i<j){
+
+           while (i<j && a[j] >= index)
                 j--;
-            if (i < j){
-                a[i++] = a[j];// 用比基准小的记录替换低位记录
-                System.out.println("从右向左："+Arrays.toString(a));
-            }
+           if(i < j){
+               a[i++] = a[j];
+           }
+           while (i< j && a[i] < index)
+               i++;
+           if(i < j){
+               a[j--] = a[i];
+           }
 
-            while (i < j && a[i] < base)
-                i++;
-            if (i < j){
-                // 用比基准大的记录替换高位记录
-                a[j--] = a[i];
-                System.out.println("从左向右："+Arrays.toString(a));
-            }
 
-        }
+       }
+        a[i] = index;
 
-        a[i] = base;// 将基准数值替换回 a[i]
-        System.out.println("循环后结果："+Arrays.toString(a));
-        quickSort(a, low, i - 1); // 对低子表进行递归排序
-        quickSort(a, i + 1, hight); // 对高子表进行递归排序
+        quickSort(a,0,i-1);
+        quickSort(a,i+1,hight);
+        System.out.println("a = [" + Arrays.toString(a));
 
     }
 

@@ -8,6 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="com-nicolas-douding-mybatis-demo" />
         <module name="nicolas-douding-demo" />
+        <module name="nicolas-douding-kafka-demo" />
+        <module name="nicolas-douding-zookeeper-demo" />
+        <module name="nicolas-dubbo-api" />
+        <module name="nicolas-dubbo-consumer-demo" />
+        <module name="nicolas-dubbo-provider-demo" />
         <module name="nicolas-netty-client-demo" />
         <module name="nicolas-netty-server-demo" />
       </profile>
@@ -16,6 +21,11 @@
       <module name="com-nicolas-douding-mybatis-demo" target="1.7" />
       <module name="myself" target="1.5" />
       <module name="nicolas-douding-demo" target="8" />
+      <module name="nicolas-douding-kafka-demo" target="1.5" />
+      <module name="nicolas-douding-zookeeper-demo" target="1.5" />
+      <module name="nicolas-dubbo-api" target="1.5" />
+      <module name="nicolas-dubbo-consumer-demo" target="1.8" />
+      <module name="nicolas-dubbo-provider-demo" target="1.8" />
       <module name="nicolas-netty-client-demo" target="1.8" />
       <module name="nicolas-netty-server-demo" target="1.8" />
     </bytecodeTargetLevel>

@@ -5,6 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/com-nicolas-douding-mybatis-demo/com-nicolas-douding-mybatis-demo.iml" filepath="$PROJECT_DIR$/com-nicolas-douding-mybatis-demo/com-nicolas-douding-mybatis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myself.iml" filepath="$PROJECT_DIR$/.idea/myself.iml" />
       <module fileurl="file://$PROJECT_DIR$/nicolas-douding-demo/nicolas-douding-demo.iml" filepath="$PROJECT_DIR$/nicolas-douding-demo/nicolas-douding-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicolas-douding-kafka-demo/nicolas-douding-kafka-demo.iml" filepath="$PROJECT_DIR$/nicolas-douding-kafka-demo/nicolas-douding-kafka-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicolas-douding-zookeeper-demo/nicolas-douding-zookeeper-demo.iml" filepath="$PROJECT_DIR$/nicolas-douding-zookeeper-demo/nicolas-douding-zookeeper-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicolas-dubbo-api/nicolas-dubbo-api.iml" filepath="$PROJECT_DIR$/nicolas-dubbo-api/nicolas-dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicolas-dubbo-consumer-demo/nicolas-dubbo-consumer-demo.iml" filepath="$PROJECT_DIR$/nicolas-dubbo-consumer-demo/nicolas-dubbo-consumer-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nicolas-dubbo-provider-demo/nicolas-dubbo-provider-demo.iml" filepath="$PROJECT_DIR$/nicolas-dubbo-provider-demo/nicolas-dubbo-provider-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/nicolas-netty-client-demo/nicolas-netty-client-demo.iml" filepath="$PROJECT_DIR$/nicolas-netty-client-demo/nicolas-netty-client-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/nicolas-netty-server-demo/nicolas-netty-server-demo.iml" filepath="$PROJECT_DIR$/nicolas-netty-server-demo/nicolas-netty-server-demo.iml" />
     </modules>
