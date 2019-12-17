@@ -1,5 +1,11 @@
 package com.nicolas.common.test;
 
+import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @version V1.0
  *          注意：本内容仅限于搜狐新闻，禁止外泄以及用于其他的商业目
@@ -18,6 +24,32 @@ public class Fbnq {
         }
     }
 
+
+
+    public boolean VerifySquenceOfBST(int [] sequence) {
+        if( sequence == null  || sequence.length == 0){
+            return false;
+        }
+
+        return isBST(sequence,0,sequence.length -1);
+
+    }
+    public boolean isBST(int[] sqe,int start,int end){
+
+        if(start >= end){
+            return true;
+        }
+        int root = sqe[end];
+        int split = start;
+        for(;split < end && sqe[split] < root; split++);
+        for(int i=split;i<end;i++){
+            if(sqe[i] < root){
+                return false;
+            }
+        }
+
+        return isBST(sqe,start,split-1 )&& isBST(sqe,split,end -1);
+    }
 
     public static void fib2(int num){
         int a = 1;
