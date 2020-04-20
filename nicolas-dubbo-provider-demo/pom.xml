@@ -26,7 +26,7 @@
         <hystrix-version>1.5.12</hystrix-version>
         <jedis-version>2.9.0</jedis-version>
         <curator.version>4.2.0</curator.version>
-        <zookeeper.version>3.4.12</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
     </properties>
 
     <dependencies>
